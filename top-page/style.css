@@ -1,0 +1,130 @@
+@charset "utf-8";
+
+/* 共通項 */
+body {
+    font-family: 'Zen Maru Gothic', sans-serif;
+}
+
+h1 {
+    font-family: 'Cherry Bomb One', cursive;
+    font-size: 24px;
+}
+
+footer small {
+    font-size: 8px;
+}
+
+.wrapper {
+    width: 100%;
+    overflow: hidden;
+    animation: change-bgc 60s infinite;
+}
+@keyframes change-bgc {
+  0% { background: red; }
+  14% { background: red; }
+  16% { background: orange; }
+  31% { background: orange; }
+  33% { background: pink; }
+  48% { background: pink; }
+  50% { background: red; }
+  64% { background: red; }
+  66% { background: orange; }
+  81% { background: orange; }
+  83% { background: pink; }
+  98% { background: pink; }
+  100% { background: red; }
+}
+
+/* ヘッダー */
+
+.header-inner {
+    width: 100%;
+    padding: 30px;
+}
+
+/* コンテンツ */
+.content {
+    display: flex;
+}
+
+/* メインエリア */
+
+.main {
+    width: 65%;
+}
+
+.key-visual {
+    width: 100%;
+    height: 800px;
+}
+
+.kv-group {
+    position: relative;
+}
+
+.kv-list {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    animation: change-anim 18s infinite;
+}
+
+.kv-list:nth-of-type(1) {
+    animation: change-anim-first 18s infinite;
+    animation-delay: 0s;
+}
+.kv-list:nth-of-type(2) {
+    animation-delay: 6s;
+}
+.kv-list:nth-of-type(3) {
+    animation-delay: 12s;
+}
+
+@keyframes change-anim-first {
+    0% {opacity: 1;}
+    25% {opacity: 1;}
+    28% {opacity: 0;}
+    97% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes change-anim {
+    0% {opacity: 0;}
+    6% {opacity: 1;}
+    31% {opacity: 1;}
+    34% {opacity: 0;}
+    100% {opacity: 0;}
+}
+
+.kv-img {
+    animation: kv-img-anim 6s infinite linear ;
+}
+@keyframes kv-img-anim {
+    0% {transform: translateX(100px) translateY(-100px) rotate(10deg);}
+    3% {transform: translateX(100) translateY(-100px) rotate(10deg);}
+    10% {transform: translateX(0) translateY(0) rotate(0deg);}
+    85% {transform: translateX(0) translateY(0) rotate(0deg);}
+    92% {transform: translateX(-100px)translateY(100px) rotate(-10deg);}
+    95% {transform: translateX(-100px)translateY(100px) rotate(-10deg);}
+    100% {transform: translateX(100px)translateY(-100px) rotate(10deg);}
+}
+
+.kv-img img {
+    width: 350px;
+}
+
+
+/* .kv-text {
+    animation: kv-text-anim 10s infinite linear ;
+}
+
+.key-visual img {
+    width: 400px;
+}
+
+/* サイド */
+.asaid {
+    width: 40%;
+    margin: 5%;
+}
